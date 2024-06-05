@@ -41,7 +41,9 @@ fun ShoppingListApp(){
     ) {
         Box(modifier = Modifier.height(36.dp))
         Button(
-            onClick = {},
+            onClick = {
+                      showDialog = true
+            },
             modifier = Modifier.align(Alignment.CenterHorizontally)
         ) {
             Text(text = "Add Item")
@@ -57,6 +59,10 @@ fun ShoppingListApp(){
         }
     }
     if (showDialog){
-        AlertDialog(onDismissRequest = { /*TODO*/ }, confirmButton = { /*TODO*/ })
+        AlertDialog(
+            onDismissRequest = { showDialog=false },
+            confirmButton = { /*TODO*/ },
+            text = { Text(text = "okay") }
+        )
     }
 }

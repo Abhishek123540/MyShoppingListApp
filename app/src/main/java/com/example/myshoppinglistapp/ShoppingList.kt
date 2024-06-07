@@ -145,14 +145,24 @@ fun ShoppingItemEditor(item: ShoppingItem, onEditComplete: (String, Int) -> Unit
                 value = editedName,
                 onValueChange = { editedName = it },
                 singleLine = true,
-                modifier = Modifier.wrapContentSize().padding(8.dp)
+                modifier = Modifier
+                    .wrapContentSize()
+                    .padding(8.dp)
             )
             BasicTextField(
                 value = editedQuantity,
                 onValueChange = { editedQuantity = it },
                 singleLine = true,
-                modifier = Modifier.wrapContentSize().padding(8.dp)
+                modifier = Modifier
+                    .wrapContentSize()
+                    .padding(8.dp)
             )
+        }
+        Button(onClick = {
+            isEditing = false
+            onEditComplete(editedName, editedQuantity.toIntOrNull() ?: 1)
+        }) {
+            Text(text = "Save")
         }
     }
 }

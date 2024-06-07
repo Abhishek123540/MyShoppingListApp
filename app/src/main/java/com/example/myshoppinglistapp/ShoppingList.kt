@@ -75,6 +75,7 @@ fun ShoppingListApp(){
             }
         }
     }
+
     if (showDialog){
         AlertDialog(
             onDismissRequest = { showDialog=false },

@@ -56,8 +56,6 @@ fun ShoppingListApp(){
             },
             modifier = Modifier.align(Alignment.CenterHorizontally)
         ) {
-            val doubleNumber: (Int) -> Int = {it*2}
-
             Text(text = "Add Item")
         }
         LazyColumn(

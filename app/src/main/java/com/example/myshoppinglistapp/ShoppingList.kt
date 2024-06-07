@@ -56,7 +56,7 @@ fun ShoppingListApp(){
             },
             modifier = Modifier.align(Alignment.CenterHorizontally)
         ) {
-            val double
+            val doubleNumber
 
             Text(text = "Add Item")
         }
